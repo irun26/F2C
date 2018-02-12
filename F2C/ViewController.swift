@@ -9,7 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var inputTextfield: UITextField!
+    @IBOutlet weak var resultsLabel: UILabel!
+    @IBAction func goButton(_ sender: Any) {
+        resultsLabel.text = inputTextfield.text
+     
 
+        
+        let text2Float: Float = Float(inputTextfield.text!)!
+        
+        
+        
+        let temperatureConverted = (text2Float - 32) * 5/9
+        
+        let string98: String = String(temperatureConverted)
+        
+        temperatureResult.text = string98
+    
+    
+    }
+    @IBOutlet weak var temperatureResult: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
